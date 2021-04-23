@@ -78,6 +78,6 @@ export default {
   }
 
   img{
-    height: 18rem;
+    height: 20rem;
   }
 </style>
