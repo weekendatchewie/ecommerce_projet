@@ -23,12 +23,12 @@
           v-bind:key="product.id"
       >
         <div class="box">
-          <figure class="image mb-4">
-            <img v-bind:src="product.get_thumbbail" alt="image-produit">
+          <figure class="image">
+            <img v-bind:src="product.get_image" alt="image-produit">
           </figure>
 
           <h3 class="is-size-4">{{ product.name }}</h3>
-          <p class="is-size-6 has-text-centered">{{ product.price}}€</p>
+          <p class="is-size-6 has-text-grey">{{ product.price}}€</p>
 
           Voir détails
         </div>
@@ -73,5 +73,11 @@ export default {
     margin-top: -1.25rem;
     margin-left: -1.25rem;
     margin-right: -1.25rem;
+    padding: 6%;
+    object-fit: contain;
+  }
+
+  img{
+    height: 18rem;
   }
 </style>
