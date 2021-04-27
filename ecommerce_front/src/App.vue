@@ -21,7 +21,7 @@
               <router-link to="/login" class="button is-light">Login</router-link>
               <router-link to="/cart" class="button is-success">
                 <span class="icon"><i class="fas fa-shopping-cart"></i></span>
-                <span>Panier</span>
+                <span>Panier ({{ cartTotalLength }})</span>
               </router-link>
 
             </div>
@@ -52,6 +52,17 @@ export default {
   },
   beforeCreate() {
     this.$store.commit('initializeStore')
+  },
+  computed: {
+    cartTotalLength() {
+      let totalLength = 0
+
+      for (let i = 0; i < this.cart.items.length; i++) {
+        totalLength += this.cart.items[i].quantity
+      }
+
+      return totalLength
+    }
   }
 }
 </script>
