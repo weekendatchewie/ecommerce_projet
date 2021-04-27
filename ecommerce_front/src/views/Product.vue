@@ -36,6 +36,7 @@
 
 <script>
 import axios from "axios";
+import { toast } from 'bulma-toast'
 
 export default {
   name: "Product",
@@ -74,6 +75,16 @@ export default {
       }
 
       this.$store.commit('addToCart', item)
+
+      toast({
+        message: 'Le produit est ajouté au panier',
+        type: 'is-success',
+        dismissible: true,
+        pauseOnHover: true,
+        duration: 2000,
+        position: "bottom-right",
+        animate: { in: 'fadeIn', out: 'fadeOut' }
+      })
     }
   }
 }
