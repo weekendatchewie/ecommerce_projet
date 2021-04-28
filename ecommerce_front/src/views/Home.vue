@@ -52,6 +52,8 @@ export default {
   },
   mounted() {
     this.getLatestProducts()
+
+    document.title = 'Home | Eshop'
   },
   methods: {
     async getLatestProducts() {
