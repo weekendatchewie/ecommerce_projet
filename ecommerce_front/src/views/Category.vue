@@ -35,6 +35,14 @@ export default {
     this.getCategory()
   },
 
+  watch: {
+    $route(to, from) {
+      if (to.name === 'Category') {
+        this.getCategory()
+      }
+    }
+  },
+
   methods: {
     async getCategory() {
       const categorySlug = this.$route.params.category_slug
