@@ -79,7 +79,7 @@ export default {
     margin-top: -1.25rem;
     margin-left: -1.25rem;
     margin-right: -1.25rem;
-    padding: 6%;
+    padding: 8%;
     object-fit: contain;
   }
 
