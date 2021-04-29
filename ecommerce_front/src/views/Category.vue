@@ -6,6 +6,13 @@
           {{ category.name }}
         </h2>
       </div>
+
+      <ProductCard
+          v-for="product in category.products"
+          v-bind:key="product.id"
+          v-bind:product="product"
+      />
+
     </div>
   </div>
 </template>
@@ -13,10 +20,11 @@
 <script>
 import axios from "axios";
 import {toast} from 'bulma-toast'
+import ProductCard from "@/components/ProductCard";
 
 export default {
   name: "Category",
-
+  components: {ProductCard},
   data() {
     return {
       category: {
