@@ -3,7 +3,7 @@
       class="column is-3"
   >
     <div class="box">
-      <figure class="image">
+      <figure class="image is-1by1">
         <img v-bind:src="product.get_image" alt="image-produit">
       </figure>
 
@@ -27,14 +27,12 @@ export default {
 
 <style scoped>
 .image {
-  margin-top: -1.25rem;
-  margin-left: -1.25rem;
-  margin-right: -1.25rem;
-  padding: 8%;
-  object-fit: contain;
+
+  height: 15rem;
 }
 
 img{
-  height: 20rem;
+  object-fit: inherit;
+  height: inherit;
 }
 </style>

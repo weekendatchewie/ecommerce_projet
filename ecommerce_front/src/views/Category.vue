@@ -6,13 +6,11 @@
           {{ category.name }}
         </h2>
       </div>
-
       <ProductCard
           v-for="product in category.products"
           v-bind:key="product.id"
           v-bind:product="product"
       />
-
     </div>
   </div>
 </template>
@@ -45,23 +43,23 @@ export default {
 
       await axios
           .get(`/api/v1/products/${categorySlug}/`)
-              .then(response => {
-                this.category = response.data
+          .then(response => {
+            this.category = response.data
 
-                document.title = this.category.name + ' | Eshop'
-              })
-              .catch(error => {
-                console.log(error)
+            document.title = this.category.name + ' | Eshop'
+          })
+          .catch(error => {
+            console.log(error)
 
-                toast({
-                  message: "Une erreur s'est produite, veuillez réessayer",
-                  type: 'is-danger',
-                  dismissible: true,
-                  pauseOnHover: true,
-                  duration: 200,
-                  position: "bottom-right",
-                })
-              })
+            toast({
+              message: "Une erreur s'est produite, veuillez réessayer",
+              type: 'is-danger',
+              dismissible: true,
+              pauseOnHover: true,
+              duration: 200,
+              position: "bottom-right",
+            })
+          })
 
       this.$store.commit('setIsLoading', false)
     }
