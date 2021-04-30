@@ -1,6 +1,7 @@
 <template>
   <div class="page-cart">
     <div class="columns is-multiline">
+
       <div class="column is-12">
         <h1 class="title">
           Panier
@@ -36,8 +37,31 @@
 </template>
 
 <script>
+import axios from "axios";
+import CartItem from "@/components/CartItem";
+
 export default {
-  name: "Cart"
+  name: "Cart",
+  components: {CartItem},
+  data() {
+    return {
+      cart: {
+        items: []
+      }
+    }
+  },
+
+  mounted() {
+    this.cart = this.$store.state.cart
+  },
+
+  computed: {
+    cartTotalLength() {
+      return this.cart.items.reduce((acc, curVal) => {
+        return acc += curVal.quantity
+      }, 0)
+    }
+  }
 }
 </script>
 
