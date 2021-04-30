@@ -1,10 +1,12 @@
 <template>
   <div class="page-product">
     <div class="columns is-multiline">
-      <div class="column is-9">
+      <div class="column is-7 block-img">
+        <div class="wrapper-img">
         <figure class="image mb-6">
           <img v-bind:src="product.get_image" alt="image produit">
         </figure>
+        </div>
 
         <h1 class="title">{{ product.name }}</h1>
 
@@ -12,7 +14,7 @@
 
       </div>
 
-      <div class="column is-3">
+      <div class="column is-5">
         <h2 class="subtitle">Information</h2>
 
         <p><strong>Prix: </strong>{{ product.price }}€</p>
@@ -97,5 +99,13 @@ export default {
 </script>
 
 <style scoped>
+.block-img {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
 
+.wrapper-img {
+  width: 30%;
+}
 </style>
