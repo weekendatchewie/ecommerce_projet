@@ -133,4 +133,8 @@ export default {
 .footer {
   background-color: #3398db57;
 }
+
+.section {
+  min-height: 80vh;
+}
 </style>
