@@ -129,4 +129,8 @@ export default {
     height: 80px;
   }
 }
+
+.footer {
+  background-color: #3398db57;
+}
 </style>
