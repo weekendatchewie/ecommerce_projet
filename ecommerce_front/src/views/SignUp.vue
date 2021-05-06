@@ -2,8 +2,8 @@
   <div class="page-sign-up">
     <div class="columns">
 
-      <div class="column is-6">
-        <img src="../assets/authentification.svg" alt="">
+      <div class="column is-6 img-box">
+        <img class="img-signup" src="../assets/signup.svg" alt="">
       </div>
 
       <div class="column is-4 is-offset-1 card-login">
@@ -143,6 +143,14 @@ export default {
 .is-link {
   width: 100%;
   margin-top: 5%;
+}
+
+.img-box {
+  text-align: center;
+}
+
+.img-signup {
+  width: 75%;
 }
 
 </style>
