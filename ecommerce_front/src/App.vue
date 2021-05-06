@@ -135,6 +135,6 @@ export default {
 }
 
 .section {
-  min-height: 80vh;
+  min-height: 92vh;
 }
 </style>
