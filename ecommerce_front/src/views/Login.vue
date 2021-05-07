@@ -64,6 +64,10 @@ export default {
     }
   },
 
+  mounted() {
+    document.title = 'Login | Eshop'
+  }
+
 }
 </script>
 
